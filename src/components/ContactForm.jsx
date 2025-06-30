@@ -53,9 +53,9 @@ const ContactForm = () => {
   }
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 ">
       <h2>{id ? "Editar Contacto" : "Agregar Contacto"}</h2>
-      <form onSubmit={handleSubmit}>
+      <form className="text-start" onSubmit={handleSubmit}>
         <div className="mb-3">
           <label className="form-label">Full Name</label>
           <input

@@ -14,11 +14,21 @@ const ContactCard = ({ contact }) => {
   return (
     <div className="card p-3 mb-3">
       <div className="d-flex justify-content-between">
-        <div>
-          <h5>{contact.name}</h5>
-          <p>{contact.address}</p>
-          <p>{contact.phone}</p>
-          <p>{contact.email}</p>
+        <div className="d-flex justify-content-between gap-3">
+          <img
+            src={`https://ui-avatars.com/api/?name=${encodeURIComponent(
+              contact.name
+            )}&background=random&size=128`}
+            alt={contact.name}
+            className="rounded-circle mb-2"
+            style={{ width: "128px", height: "128px" }}
+          />
+          <div className="text-start">
+            <h5>{contact.name}</h5>
+            <p>{contact.address}</p>
+            <p>{contact.phone}</p>
+            <p>{contact.email}</p>
+          </div>
         </div>
         <div className="d-flex flex-column align-items-end">
           <i
